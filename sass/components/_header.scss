@@ -1,0 +1,8 @@
+@use '../abstracts' as a;
+
+header {
+    background-color: a.$accent-color;
+    height: 100px;
+    position: sticky;
+    top:0;
+}

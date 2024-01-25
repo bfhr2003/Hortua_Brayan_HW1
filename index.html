@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AJAX Redux - Star Wars API</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-    
+    <h1 class="hidden">AJAX Redux - Star Wars API</h1>
+    <header>
+        <div class="grid-con">
+            <h2 class="hidden">Header</h2>
+            <div class="col-start-1 col-end-2 m-col-span-2 l-col-span-2 xl-col-span-2 logo-container">
+                <a href="index.html">
+                    <img src="images/portfolio_logo.svg" alt="Star Wars Logo" height="60">
+                    <span>Brayan Hortua</span>
+                </a>
+            </div>
+            <article class="col-start-4 col-end-4 m-col-start-11 m-col-end-13 l-col-span-10 xl-col-span-10 desktop">
+                <h3 class="hidden">Header Navbar Desktop</h3>
+                <nav class="flex-cont-header desktop">
+                    <h4 class="hidden">Header Navigation Desktop</h4>
+                    <div>
+                        <ul class="ul-navigation animation">
+                            <li class="flex-header desktop items"><a href="#home">Home</a></li>
+                            <li class="flex-header desktop items"><a href="#about">About</a></li>
+                            <li class="flex-header desktop items"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <h2 class="hidden">Header - Desktop social media icons</h2>
+                    <ul class="social-media-style ul-navigation social-animation">
+                        <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank" class="flex-header desktop items"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                        <li><a href="https://github.com/bfhr2003" target="_blank" class="flex-header desktop items"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="col-start-4 col-end-4 m-col-start-3 m-col-end-12 l-col-span-10 xl-col-span-10 tablet">
+                <h3 class="hidden">Header Navbar Tablet</h3>
+                <nav class="flex-cont-header tablet">
+                    <h4 class="hidden">Header Navigation Tablet</h4>
+                    <div>
+                        <ul class="ul-navigation-tablet animation">
+                            <li class="flex-header tablet items"><a href="#home">Home</a></li>
+                            <li class="flex-header tablet items"><a href="#about">About</a></li>
+                            <li class="flex-header tablet items"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <h2 class="hidden">Header - Tablet social media icons</h2>
+                    <ul class="social-media-style ul-navigation social-animation">
+                        <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank" class="flex-header tablet items"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                        <li><a href="https://github.com/bfhr2003" target="_blank" class="flex-header tablet items"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                    </ul>
+                </nav>
+            </article>
+            <!-- Mobile Menu -->
+            <div class="col-span-3 mobile">
+                <div class="flex-cont-header">
+                    <nav class="mobile-nav">
+                        <div>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <h2 class="hidden">Header - Mobile social media icons</h2>
+                        <ul class="social-media-style">
+                            <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                            <li><a href="https://github.com/bfhr2003" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                        </ul>
+                    </nav>
+                    <button class="hamburger">
+                        <div class="bar"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+    </main>
 </body>
 </html>
