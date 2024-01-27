@@ -20,8 +20,7 @@
             <h2 class="hidden">Header</h2>
             <div class="col-start-1 col-end-2 m-col-span-2 l-col-span-2 xl-col-span-2 logo-container">
                 <a href="index.html">
-                    <img src="img/star-wars.svg" alt="Star Wars Logo" height="60">
-                    <span>Brayan Hortua</span>
+                    <img src="img/star-wars.svg" alt="Star Wars Logo" height="60">                  
                 </a>
             </div>
             <article class="col-start-4 col-end-4 m-col-start-11 m-col-end-13 l-col-span-10 xl-col-span-10 desktop">
@@ -35,11 +34,6 @@
                             <li class="flex-header desktop items"><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    <h2 class="hidden">Header - Desktop social media icons</h2>
-                    <ul class="social-media-style ul-navigation social-animation">
-                        <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank" class="flex-header desktop items"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                        <li><a href="https://github.com/bfhr2003" target="_blank" class="flex-header desktop items"><i class="fa-brands fa-github fa-xl"></i></a></li>
-                    </ul>
                 </nav>
             </article>
             <article class="col-start-4 col-end-4 m-col-start-3 m-col-end-12 l-col-span-10 xl-col-span-10 tablet">
@@ -53,11 +47,6 @@
                             <li class="flex-header tablet items"><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    <h2 class="hidden">Header - Tablet social media icons</h2>
-                    <ul class="social-media-style ul-navigation social-animation">
-                        <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank" class="flex-header tablet items"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                        <li><a href="https://github.com/bfhr2003" target="_blank" class="flex-header tablet items"><i class="fa-brands fa-github fa-xl"></i></a></li>
-                    </ul>
                 </nav>
             </article>
             <!-- Mobile Menu -->
@@ -71,11 +60,6 @@
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
-                        <h2 class="hidden">Header - Mobile social media icons</h2>
-                        <ul class="social-media-style">
-                            <li><a href="https://www.linkedin.com/in/brayan-felipe-hortua-rodr%C3%ADguez-66b608267/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-                            <li><a href="https://github.com/bfhr2003" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a></li>
-                        </ul>
                     </nav>
                     <button class="hamburger">
                         <div class="bar"></div>
@@ -85,7 +69,24 @@
         </div>
     </header>
     <main>
-        
+        <div class="grid-con">
+            <section class="col-span-full m-col-span-6" id="character-box">
+                <h2>Character</h2>
+            </section>
+            <section class="col-span-full m-col-span-6" id="movie-box">
+                <h2>Reviews</h2>
+                <div id="review-con">
+                <!-- template will be inserted here -->
+                </div>
+                <template id="review-template">
+                <section>
+                    <h3 class="review-heading"></h3>
+                    <p class="review-author"></p>
+                    <p class="review-description"></p>
+                </section>
+                </template>
+            </section>
+        </div>  
     </main>
 </body>
 </html>
