@@ -15,6 +15,7 @@
 </head>
 <body>
     <h1 class="hidden">AJAX Redux - Star Wars API</h1>
+
     <header>
         <div class="grid-con">
             <h2 class="hidden">Header</h2>
@@ -68,25 +69,38 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="grid-con">
             <section class="col-span-full m-col-span-6" id="character-box">
                 <h2>Character</h2>
+                <ul id="character-list">
+                </ul>
             </section>
             <section class="col-span-full m-col-span-6" id="movie-box">
-                <h2>Reviews</h2>
-                <div id="review-con">
+                <h2>Movies</h2>
+                <div id="movie-con">
                 <!-- template will be inserted here -->
                 </div>
-                <template id="review-template">
-                <section>
-                    <h3 class="review-heading"></h3>
-                    <p class="review-author"></p>
-                    <p class="review-description"></p>
-                </section>
+                <template id="movie-template">
+                    <section>
+                        <h3 class="movie-heading"></h3><br>
+                        <p class="movie-description"></p>
+                    </section>
                 </template>
             </section>
         </div>  
     </main>
+
+    <footer class="grid-con">
+        <h2 class="hidden">Footer</h2>
+        <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full back-to-top">
+            <a href="index.html">
+                <h2>Back to Top</h2>
+                <img src="img/star-wars.svg" alt="Star Wars API - Logo" height="60">
+                <p class="copyright"> Star Wars API &copy; - 2023 All Rights Reserved.</p>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
