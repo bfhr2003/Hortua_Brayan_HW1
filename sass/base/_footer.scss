@@ -1,0 +1,15 @@
+@use '../abstracts' as a;
+footer {
+    background-color: a.$accent-color;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.back-to-top p {
+    margin: 0;
+    color: a.$body-text-color;
+}
+
+.back-to-top a {
+    color: a.$body-text-color;
+}
