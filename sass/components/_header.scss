@@ -5,7 +5,132 @@ header {
     height: 100px;
     position: sticky;
     top:0;
+    font-family: a.$secondary-color;
+}
+
+header a {
+    text-decoration: none;
+    color: a.$body-text-color;
     font-family: a.$heading-font;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.flex-cont-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: end;
+    justify-content: end;
+}
+
+.flex-header {
+    padding: .125rem;
+    text-align: center;
+    margin-right: .625rem;
+}
+
+.logo-container a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0rem;
+    margin-left: 1.875rem;
+}
+
+.ul-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 1.875em 0em 1.25em 0em;
+}
+
+.ul-navigation-tablet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 1.875em 0em 1.25em 0em;
+    padding: 0;
+
+}
+
+.ul-navigation-tablet a {
+    text-decoration: none;
+    font-size: 15px;
+    padding: .0625rem;
+}
+
+.ul-navigation a {
+    text-decoration: none;
+    font-size: 1.125em;
+    padding: .625em;
+}
+
+.animation li {
+    display: inline-block;
+    position: relative;
+    margin-right: 2.5em;
+    border: 2px solid a.$secondary-color;
+    padding: .625em;
+    border-radius: 1.5625em;
+    background-color: transparent;
+}
+
+.animation li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: a.$secondary-color;
+    border-radius: 1.5625em;
+    transform-origin: bottom right;
+    z-index: -1;
+}
+
+.animation li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: a.$secondary-color;
+}
+
+.animation-tablet li {
+    display: inline-block;
+    position: relative;
+    padding: 0.625em;
+    background-color: transparent;
+}
+
+.animation-tablet li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: a.$primary-color;
+    border-radius: 1.5625em;
+    transform-origin: bottom right;
+    z-index: -1;
+}
+
+.animation-tablet li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: a.$primary-color;
+    color: a.$secondary-color;
 }
 
 // Mobile Menu
@@ -27,7 +152,7 @@ header {
     display: block;
     width: 100%;
     height: 5px;
-    background-color: a.$primary-color;
+    background-color: a.$body-text-color;
     margin: 0.375rem 0px;
     transition: 0.4s;
 }
@@ -71,7 +196,7 @@ header {
     text-align: center;
     padding: .75rem 1rem;
 
-    color: #2A2B2A;
+    color: a.$body-text-color;
     text-decoration: none;
 }
 

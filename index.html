@@ -21,7 +21,7 @@
             <h2 class="hidden">Header</h2>
             <div class="col-start-1 col-end-2 m-col-span-2 l-col-span-2 xl-col-span-2 logo-container">
                 <a href="index.html">
-                    <img src="img/star-wars.svg" alt="Star Wars Logo" height="60">                  
+                    <img src="img/star-wars.svg" alt="Star Wars Logo" height="100">                  
                 </a>
             </div>
             <article class="col-start-4 col-end-4 m-col-start-11 m-col-end-13 l-col-span-10 xl-col-span-10 desktop">
@@ -30,9 +30,9 @@
                     <h4 class="hidden">Header Navigation Desktop</h4>
                     <div>
                         <ul class="ul-navigation animation">
-                            <li class="flex-header desktop items"><a href="#home">Home</a></li>
-                            <li class="flex-header desktop items"><a href="#about">About</a></li>
-                            <li class="flex-header desktop items"><a href="#contact">Contact</a></li>
+                            <li class="flex-header desktop items"><a href="https://www.starwars.com/" target="_blank">Explore</a></li>
+                            <li class="flex-header desktop items"><a href="#">Characters</a></li>
+                            <li class="flex-header desktop items"><a href="https://swapi.dev/api/" target="_blank">Star Wars API</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -43,9 +43,9 @@
                     <h4 class="hidden">Header Navigation Tablet</h4>
                     <div>
                         <ul class="ul-navigation-tablet animation">
-                            <li class="flex-header tablet items"><a href="#home">Home</a></li>
-                            <li class="flex-header tablet items"><a href="#about">About</a></li>
-                            <li class="flex-header tablet items"><a href="#contact">Contact</a></li>
+                            <li class="flex-header tablet items"><a href="https://www.starwars.com/" target="_blank">Explore</a></li>
+                            <li class="flex-header tablet items"><a href="#">Characters</a></li>
+                            <li class="flex-header desktop items"><a href="https://swapi.dev/api/" target="_blank">Star Wars API</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -56,9 +56,9 @@
                     <nav class="mobile-nav">
                         <div>
                             <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="https://www.starwars.com/" target="_blank">Explore</a></li>
+                                <li><a href="#">Characters</a></li>
+                                <li><a href="https://swapi.dev/api/" target="_blank">Star Wars API</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -72,13 +72,15 @@
 
     <main>
         <div class="grid-con">
-            <section class="col-span-full m-col-span-6" id="character-box">
-                <h2>Character</h2>
-                <ul id="character-list">
+            <section class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6 character-box" id="character-box">
+                <h2 class="title">Character</h2>
+                <br>
+                <ul id="character-list" class="character-list">
                 </ul>
             </section>
-            <section class="col-span-full m-col-span-6" id="movie-box">
-                <h2>Movies</h2>
+            <section class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6 movie-box" id="movie-box">
+                <h2 class="title">Movies</h2>
+                <br>
                 <div id="movie-con">
                 <!-- template will be inserted here -->
                 </div>
@@ -97,8 +99,8 @@
         <div class="col-span-full m-col-span-full l-col-span-full xl-col-span-full back-to-top">
             <a href="index.html">
                 <h2>Back to Top</h2>
-                <img src="img/star-wars.svg" alt="Star Wars API - Logo" height="60">
-                <p class="copyright"> Star Wars API &copy; - 2023 All Rights Reserved.</p>
+                <img src="img/star-wars.svg" alt="Star Wars API - Logo" height="50">
+                <p class="copyright"> Swapi &copy; - 2023 All Rights Reserved.</p>
             </a>
         </div>
     </footer>

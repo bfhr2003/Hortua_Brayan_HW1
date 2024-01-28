@@ -1,4 +1,33 @@
-.list-container {
-    margin: 0;
-    padding: 0;
+@use '../abstracts' as a;
+
+main {
+    margin: 1.25rem;
+}
+
+.title {
+    font-size: 1.5em;
+    font-family: a.$heading-font;
+    color: a.$secondary-color;
+}
+
+.character-box {
+    color: a.$secondary-color;
+
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.movie-box {
+    color: a.$secondary-color;
+    font-family: a.$heading-font;
+
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.movie-img {
+    width: 45%;
 }
