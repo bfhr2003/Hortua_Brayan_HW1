@@ -1,5 +1,11 @@
 (() => {
 
+    //GreenSock Animations
+    gsap.to('.official-logo', { duration: 1, rotationY: 180, repeat: 1, yoyo: true });
+
+    let mySplitText = new SplitText(".movie-heading", { type: "chars,words,lines" });
+    gsap.to(mySplitText.chars, { duration: 0.5, opacity: 0, stagger: 0.1 });
+
     //Variables
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
@@ -24,10 +30,11 @@
             let logoIntro = document.createElement('img');
             logoIntro.src = 'img/user-ninja-solid.svg';
             logoIntro.className = 'logo-intro';
-            logoIntro.style.width = '80%';
 
             characterBox.appendChild(spinner);
             characterBox.appendChild(logoIntro);
+
+            gsap.to('.logo-intro', {duration: 1, rotationY: 180, repeat: 1, yoyo: true});
 
 
         fetch(`${baseUrl}people/?format=json`)
@@ -43,20 +50,26 @@
 
             characters.slice(0, 10).forEach(character => {
                 const li = document.createElement('li');
-                li.style.listStyle = 'none';
-                li.style.margin = '0.2em';
-                li.style.padding = '0.1em';
-                li.style.fontSize = '45px';
-                li.style.borderBottom = '1px solid #F9FEEC';
-                li.style.boxShadow = '0px 0px 10px 5px #645c9c';
-                const a = document.createElement('a');
                 li.classList.add('character-list');
+                li.style.listStyle = 'none';
+                li.style.height = '55px';
+                li.style.margin = '0.1em';
+                li.style.fontSize = '50px';
+                li.style.borderBottom = '1px solid #F9FEEC';
+                li.style.backgroundImage = `url('img/${character.name}.jpeg')`;
+                li.style.backgroundSize = 'cover';
+                li.style.backgroundPosition = 'center';
+                li.style.backgroundRepeat = 'repeat';
+                                
+
+                const a = document.createElement('a');
                 a.textContent = character.name;
                 a.href = '#';
+                a.style.fontSize = '50px';
 
                 if (character.films.length > 0) {
-                    const filmIndex = Math.floor(Math.random() * character.films.length);
-                    a.dataset.films = character.films[filmIndex];
+                    const movieArrayIndex = Math.floor(Math.random() * character.films.length);//Math.random Returns a random Number from the films array [0,1,2,3,4,5,6]. Just to select one movie.
+                    a.dataset.films = character.films[movieArrayIndex];
                 }
                 a.addEventListener("click", getMovieInformation);
                 li.appendChild(a);
@@ -71,7 +84,7 @@
     }
 
     function getMovieInformation(event) {
-        event.preventDefault();
+        event.preventDefault(event);
         
         let spinner = document.createElement('div');
             spinner.innerHTML = spinnerLoader;
@@ -81,31 +94,39 @@
             let logoIntro = document.createElement('img');
             logoIntro.src = 'img/clapperboard-solid.svg';
             logoIntro.className = 'logo-intro';
-            logoIntro.style.width = '100%';
 
             movieBox.appendChild(spinner);
             movieBox.appendChild(logoIntro);
+
+            gsap.to('.logo-intro', { duration: 1, rotationY: 180, repeat: 1, yoyo: true });
 
         movieCon.innerHTML = "";
         const movieLink = event.currentTarget.dataset.films;
         console.log("Character selected:", event.currentTarget.textContent);
         
+        
         fetch(`${movieLink}?format=json`)
             .then(response => response.json())
-            .then(function(film) {
-                console.log("Fetched film information and description:", film);
+            .then(function(response) {
+                console.log("Fetched film information and description:", response);
 
                 spinner.remove();
                 logoIntro.remove();
 
+                movieCon.innerHTML = "";
+
                 const template = document.importNode(movieTemplate.content, true);
-                template.querySelector(".movie-heading").textContent = film.title;
-                template.querySelector(".movie-description").textContent = film.opening_crawl;
+
+                const movieHeading = template.querySelector(".movie-heading");
+                movieHeading.innerHTML = response.title;
+
+                const movieDescription = template.querySelector(".movie-description");
+                movieDescription.innerHTML = response.opening_crawl;
 
                 const img = document.createElement('img');
-                img.src = `img/${film.episode_id}.jpeg`;
+                img.src = `img/${response.episode_id}.jpeg`;
                 img.className = 'movie-img';
-                img.alt = film.title;
+                img.alt = response.title;
                 console.log(img);
 
                 movieCon.appendChild(template);
@@ -122,10 +143,9 @@
 
     getCharacters();
 
-//Event Listeners
+    //Event Listeners
     menu_btn.addEventListener('click', function () {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
     });
-
 })();
