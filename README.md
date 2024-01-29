@@ -3,7 +3,7 @@
 <h4 align ="center">by Brayan Hortua Rodriguez</h4>
 
 
-**Welcome 🚀!,** this repo it's about character/movie guide using the Star Wars API.
+**Welcome 🚀!,** this repo it's about character/movie guide using the Star Wars API 🌟.
 
 > Each list Item contain the name of a character that acts as a link to one of the movies the character was in. When the character.link is clicked a separate AJAX call/function will be called and will return a movie title, the opening crawl and movie poster to a separate, section on the page.
 
@@ -19,6 +19,7 @@
 * CSS
 * JavaScript
 * Sass
+* GreenSock
 
 ## License
 
