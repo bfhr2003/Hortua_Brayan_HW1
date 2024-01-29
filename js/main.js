@@ -3,9 +3,6 @@
     //GreenSock Animations
     gsap.to('.official-logo', { duration: 1, rotationY: 180, repeat: 1, yoyo: true });
 
-    let mySplitText = new SplitText(".movie-heading", { type: "chars,words,lines" });
-    gsap.to(mySplitText.chars, { duration: 0.5, opacity: 0, stagger: 0.1 });
-
     //Variables
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
