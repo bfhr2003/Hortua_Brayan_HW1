@@ -5,9 +5,9 @@ main {
 }
 
 .title {
-    font-size: 1.5em;
+    font-size: 45px;
     font-family: a.$heading-font;
-    color: a.$secondary-color;
+    color: a.$accent-color;
 }
 
 .character-box {
@@ -28,6 +28,18 @@ main {
     margin-bottom:10px;
 }
 
+.movie-heading {
+    font-size: 30px;
+}
+
+.movie-description {
+    font-size: 24px;
+}
+
 .movie-img {
     width: 45%;
+}
+
+.logo-intro {
+    width: 60%;
 }
