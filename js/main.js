@@ -1,7 +1,32 @@
 (() => {
 
     //GreenSock Animations
-    gsap.to('.official-logo', { duration: 1, rotationY: 180, repeat: 1, yoyo: true });
+    var timeline = gsap.timeline({
+        onComplete: startOtherAnimations
+    });
+
+    timeline
+        .to("#square1", 1, {
+            width: "0",
+            ease: Power4.easeIn,
+            delay: "0.5"
+        })
+        .to("#square2", 1, {
+            width: "0",
+            ease: Power3.easeOut,
+            delay: "0"
+        })
+        .to("#square1, #square2", 0.2, {
+            opacity: 0,
+            onComplete: function() {
+                gsap.set("#square1, #square2", { display: "none" });
+            }
+        });
+
+    function startOtherAnimations() {
+        gsap.to('.official-logo', { duration: 1, rotationY: 180, repeat: 1, yoyo: true });
+        
+    }
 
     //Variables
     const menu_btn = document.querySelector('.hamburger');
