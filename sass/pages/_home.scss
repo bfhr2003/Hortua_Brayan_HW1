@@ -43,3 +43,20 @@ main {
 .logo-intro {
     width: 60%;
 }
+
+.loading-animation {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 50%;
+
+    &#square1 {
+        background-color: a.$primary-color;
+        right: 50%;
+    }
+    
+    &#square2 {
+        background-color: a.$accent-color;
+        right: 0;
+    }
+}
